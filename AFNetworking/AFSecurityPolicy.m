@@ -238,7 +238,6 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
         //          "Do not implicitly trust self-signed certificates as anchors (kSecTrustOptionImplicitAnchors).
         //           Instead, add your own (self-signed) CA certificate to the list of trusted anchors."
         NSLog(@"In order to validate a domain name for self signed certificates, you MUST use pinning.");
-        return NO;
     }
 
     NSMutableArray *policies = [NSMutableArray array];
